@@ -1,7 +1,7 @@
 // 1)
 
-let alunos = ['Esther','Mariana','Samuel','Rafael','David','Mathews','João Vitor','Isis','Lucas','Ramon','Suellen','Gabriel','Ilton','Bruno','Ricardo'];
-let notas = [8.5, 7.2, 6.8, 9.1, 5.4, 7.9, 6.5, 8.3, 4.7, 9.8, 6.2, 7.6, 9.0, 5.3, 8.7];
+let alunos = ['Esther','Mariana','Samuel','Rafael','David','Mathews','João Vitor','Isis'];
+let notas = [8.5, 7.2, 6.8, 9.1, 5.4, 7.9, 6.5, 8.3];
 
 const alunosArray = []
 
@@ -20,18 +20,30 @@ alunosArray.forEach((elemento) => console.log(elemento["nome"]))
 
 // 3)
 
-// let situacao = notas.map(nota => nota >= 7.0 ? "Aprovado" : "Reprovado")
-
-
-// for (i = 0; i < alunos.length; i++) {
-//     objeto[i].situacao = (notas[i] >= 7.0 ? "Aprovado" : "Reprovado")
-// }
-
 alunosArray.forEach(elemento => {
-    elemento["situação"] = elemento["nota"] >= 7.0 ? "Aprovado" : "Reprovado"
+    elemento["situacao"] = elemento["nota"] >= 7.0 ? "Aprovado" : "Reprovado"
 })
+console.log(alunosArray)
 
-// Para o array "alunosArray" faça (=>), adicione o elemento situação (elemento["situação"])
+// 4) Crie um mapa (objeto Map) a partir do seu array de objetos
 
-//Cria um mapa vazio
-let mapa = new Mapa()
+const mapa = new Map(alunosArray.map(obj => [obj.nome, [obj.nota, obj.situacao]]))
+console.log(mapa)
+
+// const mapa2 = {
+//     "esther" : { nome: 'Esther', nota: 8.5, situacao: 'Aprovado' },
+//     "mariana" : { nome: 'Mariana', nota: 7.2, situacao: 'Aprovado' },
+//     "samuel" : { nome: 'Samuel', nota: 6.8, situacao: 'Reprovado' },
+//     "rafael" : { nome: 'Rafael', nota: 9.1, situacao: 'Aprovado' },
+//     "david" : { nome: 'David', nota: 5.4, situacao: 'Reprovado' },
+//     "mathews" : { nome: 'Mathews', nota: 7.9, situacao: 'Aprovado' },
+//     "Joao" : { nome: 'João Vitor', nota: 6.5, situacao: 'Reprovado' },
+//     "isis" : { nome: 'Isis', nota: 8.3, situacao: 'Aprovado' }
+// }
+// console.log(mapa2)
+
+//5) Utilize o método get( ) para obter a nota do 5º elemento do mapa
+
+
+console.log(mapa.get(["david"]))
+
