@@ -91,3 +91,22 @@ console.log(vendasArray)
 // Cliente: cpf -> [ nome, datanascimento ]
 // Produto: codigo -> [ descricao, qtdestoque ]
 // Venda: codigo -> [ datahora, venda, produto ]
+
+const mapa1 = new Map(clientesArray.map(obj => [obj.nome, [obj.cpf, obj.datanascimento]]))
+console.log(mapa1)
+
+const mapa2 = new Map(produtosArray.map(obj => [obj.codigo_produto, [obj.descricao, obj.qtde_estoque]]))
+console.log(mapa2)
+
+const mapa3 = new Map(vendasArray.map(obj => [obj.codigo_venda, [obj.datahora, obj.cliente, obj.produto]]))
+console.log(mapa3)
+
+// Exercício 5
+// Faça a mesma coisa que o exercício anterior, porém agora os valores devem ser exibidos em formato de objeto ao invés de array.
+// Cliente: cpf -> { nome, datanascimento }
+// Produto: codigo -> { descricao, qtdestoque }
+// Venda: codigo -> { datahora, cliente, produto }
+
+const mapa1 = new Map(clientesArray.map(obj => {obj.nome, {obj.cpf, obj.datanascimento}}))
+console.log(mapa1)
+
