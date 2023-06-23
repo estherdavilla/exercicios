@@ -45,5 +45,26 @@ console.log(mapa)
 //5) Utilize o método get( ) para obter a nota do 5º elemento do mapa
 
 
-console.log(mapa.get(["david"]))
+console.log(mapa.get("David")[0])
 
+
+// 6) Utilize o método delete( ) para remover o 4º elemento do mapa.
+
+mapa.delete("Rafael")
+console.log(mapa)
+
+// 7) Utilize o método has( ) para verificar se existe algum aluno chamado "Jon Snow" neste mapa.
+
+console.log(mapa.has("Jon Snow"))
+
+// 8) Mostre todas as chaves do mapa utilizando o método keys( )
+
+console.log(mapa.keys())
+
+// 9) Mostre todos os valores do mapa utilizando o método values( )
+
+console.log(mapa.values())
+
+// 10) Mostre as chaves e seus respectivos valores utilizando o método entries( )
+
+console.log(mapa.entries())
