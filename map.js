@@ -13,10 +13,12 @@ for (i = 0; i < alunos.length; i++) {
     alunosArray.push(objeto)
 }
 console.log(alunosArray)
+console.log('---------------------------------')
 
 // 2)
 
 alunosArray.forEach((elemento) => console.log(elemento["nome"]))
+console.log('---------------------------------')
 
 // 3)
 
@@ -24,11 +26,13 @@ alunosArray.forEach(elemento => {
     elemento["situacao"] = elemento["nota"] >= 7.0 ? "Aprovado" : "Reprovado"
 })
 console.log(alunosArray)
+console.log('---------------------------------')
 
 // 4) Crie um mapa (objeto Map) a partir do seu array de objetos
 
 const mapa = new Map(alunosArray.map(obj => [obj.nome, [obj.nota, obj.situacao]]))
 console.log(mapa)
+console.log('---------------------------------')
 
 // const mapa2 = {
 //     "esther" : { nome: 'Esther', nota: 8.5, situacao: 'Aprovado' },
@@ -44,26 +48,29 @@ console.log(mapa)
 
 //5) Utilize o método get( ) para obter a nota do 5º elemento do mapa
 
-
 console.log(mapa.get("David")[0])
-
+console.log('---------------------------------')
 
 // 6) Utilize o método delete( ) para remover o 4º elemento do mapa.
 
 mapa.delete("Rafael")
 console.log(mapa)
+console.log('---------------------------------')
 
 // 7) Utilize o método has( ) para verificar se existe algum aluno chamado "Jon Snow" neste mapa.
 
 console.log(mapa.has("Jon Snow"))
+console.log('---------------------------------')
 
 // 8) Mostre todas as chaves do mapa utilizando o método keys( )
 
 console.log(mapa.keys())
+console.log('---------------------------------')
 
 // 9) Mostre todos os valores do mapa utilizando o método values( )
 
 console.log(mapa.values())
+console.log('---------------------------------')
 
 // 10) Mostre as chaves e seus respectivos valores utilizando o método entries( )
 
