@@ -54,8 +54,8 @@ class Venda {
 // Instancie a seguinte quantidade de objetos para cada classe, sabendo que os atributos "cliente" e "produto" da Venda fazem referência a clientes e produtos que já existem:
 
 let cliente1 = new Cliente("85121621501","Niklaus Mikaelson","26/08/1036")
-let cliente2 = new Cliente("05482140281","Elijan Mikaelson","16/07/1033")
-let cliente3 = new Cliente("06082144652","Rebekah Mikaelson","07/03/1039")
+let cliente2 = new Cliente("05482140281","Elijan Mikaelson","16/07/1033") 
+let cliente3 = new Cliente("05482140281","Rebekah Mikaelson","07/03/1039") //mesmo CPF que o Elijah
 
 let produto1 = new Produto("015246","Agulha hipodérmica 25x8",500)
 let produto2 = new Produto("054260","Seringa hipodérmica 5mL",400)
