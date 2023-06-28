@@ -6,10 +6,10 @@ class Forma {
         this.altura = altura
     }
     calcularArea() {
-        console.log("Sua área é...")
+        console.log("Área da classe mãe...")
     }
     calcularVolume() {
-        console.log("Seu volume é...")
+        console.log("Volume da classe mãe...")
     }
 }
 
@@ -135,6 +135,8 @@ console.log("Resultado Volume Esfera: " + circulo.calcularVolumeEsfera())
 // b)  Explique a razão pela qual a invocação do método "calcularVolume" por uma instância da classe "FormaCircular" produz a saída padrão da classe mãe.
 
 console.log(circulo.calcularVolume())
-//Por causa do polimorfismo, que utiliza os mesmo métodos de uma classe mãe, porém de forma diferente.
+//Por causa do polimorfismo, que utiliza os mesmo métodos de uma classe mãe, porém de forma diferente. No método 'calcularVolume' não existe saída para a classe filha 'FormaCircular', por quê o método não é aplicado a classe filha. Neste caso, á saída da função é a mesma aplicada a classe mãe.
 
 
+// Exercício 8 (BÔNUS)
+// Transforme o atributo #pi da classe FormaRedonda em um atributo estático e faça as modificações necessárias no código.
