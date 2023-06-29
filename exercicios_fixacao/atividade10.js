@@ -77,11 +77,10 @@ class FormaPlana extends Forma{
 }
 
 class FormaCircular extends Forma {
-    #pi
+    #pi = 3.14
     #raio
     constructor(altura, raio){
         super(altura)
-        this.#pi = 3.14
         this.#raio = raio
     }
     getRaio() {
@@ -90,12 +89,9 @@ class FormaCircular extends Forma {
     setRaio(novoRaio) {
         this.#raio = novoRaio
     }
-    getPi() {
-        return this.#pi
-    }
     // Exercício 5
     calcularArea(){
-        let area = this.#pi * (this.#raio ** 2)
+        let area =  this.#pi * (this.#raio ** 2)
         return area.toFixed(2)
     }
     calcularVolumeCilindro(){
@@ -108,7 +104,7 @@ class FormaCircular extends Forma {
         let volume = (areabase * this.altura)/3
         return volume.toFixed(2)
     }
-    calcularVolumeEsfera(){
+    calcularVolumEsfera(){
         let areabase = this.calcularArea()
         let volume = areabase * this.#raio * 1.33
         return volume.toFixed(2)
@@ -130,7 +126,7 @@ console.log("Resultado Volume do Triângulo: " + triangulo.calcularVolume())
 console.log("Resultado Área base do Circulo: " + circulo.calcularArea())
 console.log("Resultado Volume Cilindro: " + circulo.calcularVolumeCilindro())
 console.log("Resultado Volume Cone: " + circulo.calcularVolumeCone())
-console.log("Resultado Volume Esfera: " + circulo.calcularVolumeEsfera())
+console.log("Resultado Volume Esfera: " + circulo.calcularVolumEsfera())
 
 // b)  Explique a razão pela qual a invocação do método "calcularVolume" por uma instância da classe "FormaCircular" produz a saída padrão da classe mãe.
 
