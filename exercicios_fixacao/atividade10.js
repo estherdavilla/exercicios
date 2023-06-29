@@ -78,10 +78,14 @@ class FormaPlana extends Forma{
 
 class FormaCircular extends Forma {
     #pi = 3.14
+    static pin = 3.14
     #raio
     constructor(altura, raio){
         super(altura)
         this.#raio = raio
+    }
+    getPin(){
+        return FormaCircular.pin
     }
     getRaio() {
         return this.#raio
@@ -136,3 +140,5 @@ console.log(circulo.calcularVolume())
 
 // Exercício 8 (BÔNUS)
 // Transforme o atributo #pi da classe FormaRedonda em um atributo estático e faça as modificações necessárias no código.
+
+console.log(FormaCircular.getPin())
