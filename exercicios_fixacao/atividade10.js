@@ -141,4 +141,3 @@ console.log(circulo.calcularVolume())
 // Exercício 8 (BÔNUS)
 // Transforme o atributo #pi da classe FormaRedonda em um atributo estático e faça as modificações necessárias no código.
 
-console.log(FormaCircular.getPin())
